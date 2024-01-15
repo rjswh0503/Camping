@@ -1,0 +1,50 @@
+import React from 'react';
+import img1 from '../img/캠핑 메인페이지 이미지.webp';
+import img2 from '../img/메인페이지 이미지2.jpeg';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+
+
+const Carousel = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    
+  };
+
+  return (
+    <div className='main-carousel' style={{ textAlign: 'center' }}>
+      <Slider {...settings}>
+        <div>
+          <img
+            src={img1}
+            alt='Slide 1'
+            style={{ width: '55%', height: 'auto', maxHeight: '400px', margin: '0 auto' }}
+          />
+        </div>
+        <div>
+          <img
+            src={img2}
+            alt='Slide 2'
+            style={{ width: '55%', height: 'auto', maxHeight: '400px', margin: '0 auto' }}
+          />
+        </div>
+        <div>
+          <img
+            src={img1}
+            alt='Slide 3'
+            style={{ width: '55%', height: 'auto', maxHeight: '400px', margin: '0 auto' }}
+          />
+        </div>
+      </Slider>
+    </div>
+  );
+};
+
+export default Carousel;
