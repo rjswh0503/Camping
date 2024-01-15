@@ -1,7 +1,7 @@
 import React from 'react';
-import img2 from '../img/123.jpeg';
-import img3 from '../img/1234.jpeg';
-import img4 from '../img/1.jpg';
+import img2 from '../img/MainImg/123.jpeg';
+import img3 from '../img/MainImg/1234.jpeg';
+import img4 from '../img/MainImg/1.jpg';
 import { CiShoppingBasket } from "react-icons/ci";
 import '../css/ShopMain.css';
 

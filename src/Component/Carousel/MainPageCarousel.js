@@ -1,12 +1,12 @@
 import React from 'react';
-import img1 from '../../img/캠핑 메인페이지 이미지.webp';
-import img2 from '../../img/메인페이지 이미지2.jpeg';
+import img1 from '../../img/MainImg/캠핑 메인페이지 이미지.webp';
+import img2 from '../../img/MainImg/메인페이지 이미지2.jpeg';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 
-const Carousel = () => {
+const MainPageCarousel = () => {
   const settings = {
     dots: true,
     infinite: true,
@@ -47,4 +47,4 @@ const Carousel = () => {
   );
 };
 
-export default Carousel;
+export default MainPageCarousel;

@@ -1,15 +1,16 @@
-import logo from './logo.svg';
+
 import './App.css';
-import Main from './pages/Main';
-import ShopMain from './pages/shop/ShopMain';
+import ProductDetail from './pages/shop/ProductDetail';
+import Main from './pages/shop/ShopMain';
 
 
 
 function App() {
   return (
     <div>
-      {/*<Main/>*/}
-      <ShopMain/>
+      <Main/>
+      {/*<ProductDetail/>*/}
+      
     </div>
   );
 }

@@ -1,5 +1,6 @@
 import React from 'react';
-import Carousel from '../../Component/Carousel/Carousel';
+
+import Carousel from '../../Component/Carousel/MainPageCarousel';
 import { FaShoppingCart,FaUserAlt} from "react-icons/fa";
 import { IoExit } from "react-icons/io5";
 import ProductList from '../../Component/ProductList';
@@ -10,10 +11,11 @@ import Tent from './Tent';
 import Sleeping from './Sleeping';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ShopCart from './ShopCart';
-import Logo from '../../img/Logo.png'
+import Logo from '../../img/MainImg/Logo.png'
 
 
 const ShopMain = () => {
+
 
     return (
             

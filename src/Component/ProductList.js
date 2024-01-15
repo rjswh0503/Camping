@@ -1,5 +1,5 @@
 import React from 'react';
-import img1 from '../img/캠핑 메인페이지 이미지.webp';
+import img1 from '../img/MainImg/캠핑 메인페이지 이미지.webp';
 import { CiShoppingBasket } from "react-icons/ci";
 import '../css/ShopMain.css';
 
@@ -7,7 +7,6 @@ const ProductList = () => {
 
     return (
         <div>
-             
             <div className='new-item' style={{display:'flex', justifyContent:'center'}}>
                 <section>
                 <h6>New Items</h6>
@@ -32,17 +31,7 @@ const ProductList = () => {
                                     </div>
                             </div>
                             </a>
-                                <div className='itemFooter clearfix'>
-                                    <div className='fl'>
-                                        <span className='basketBtn'>
-                                            <a href=''>
-                                            <CiShoppingBasket size={20} />
-                                            </a>
-                                        </span>
-                                        <span className='reviewCnt'>리뷰0</span>
-                                    </div>
-                                    <div className='fr'></div>
-                                </div>
+                                
                         </li>
                         <li className='swiper-slide swiper-slide-active'style={{
                             width: "272.5px", 
