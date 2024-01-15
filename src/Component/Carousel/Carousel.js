@@ -1,6 +1,6 @@
 import React from 'react';
-import img1 from '../img/캠핑 메인페이지 이미지.webp';
-import img2 from '../img/메인페이지 이미지2.jpeg';
+import img1 from '../../img/캠핑 메인페이지 이미지.webp';
+import img2 from '../../img/메인페이지 이미지2.jpeg';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';

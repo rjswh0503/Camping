@@ -16,12 +16,35 @@ function Nav() {
                 </Link>
               </li>
               <li className='f1'>
-                <Link to="/sleeping">
+                <Link to="/sleeping" target='_blank'rel="noopener noreferrer">
                   <img src='https://www.ocamall.com/design/ocamall/2022_renew/img/main_category_icon_02.png' alt="침낭 아이콘" />
                   <span>침낭</span>
                 </Link>
               </li>
-              {/* 필요한 만큼 리스트 아이템을 추가하세요 */}
+              <li className='f1'>
+                <Link to="/led">
+                  <img src='https://www.ocamall.com/design/ocamall/2022_renew/img/main_category_icon_04.png' alt="램프 아이콘" />
+                  <span>램프</span>
+                </Link>
+              </li>
+              <li className='f1'>
+                <Link to="/bbq">
+                  <img src='https://www.ocamall.com/design/ocamall/2022_renew/img/main_category_icon_05.png' alt="화로 아이콘" />
+                  <span>화로BBQ</span>
+                </Link>
+              </li>
+              <li className='f1'>
+                <Link to="/table">
+                  <img src='https://www.ocamall.com/design/ocamall/2022_renew/img/main_category_icon_03.png' alt="의자 아이콘" />
+                  <span>의자</span>
+                </Link>
+              </li>
+              <li className='f1'>
+                <Link to="/kitchen">
+                  <img src='https://www.ocamall.com/design/ocamall/2022_renew/img/main_category_icon_06.png' alt="키친 아이콘" />
+                  <span>키친</span>
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
