@@ -8,8 +8,8 @@ import Main from './pages/shop/ShopMain';
 function App() {
   return (
     <div>
-      <Main/>
-      {/*<ProductDetail/>*/}
+      {/*<Main/>*/}
+      <ProductDetail/>
       
     </div>
   );
