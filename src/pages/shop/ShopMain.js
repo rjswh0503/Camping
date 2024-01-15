@@ -6,61 +6,79 @@ import ProductList from '../../Component/ProductList';
 import Nav from '../../Component/Nav';
 import CategoryList from '../../Component/CategoryList';
 import Footer from '../../Component/Footer';
+import Tent from './Tent';
+import Sleeping from './Sleeping';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import ShopCart from './ShopCart';
+
 
 const ShopMain = () => {
 
     return (
-        <div className='main-shopping'>
-            <div className='main-logo'>
-                <section className='logo'>
-                <h1>Logo</h1>
-                </section>
-                <section className='icon'>
-                    <IoExit size={40}  />
-                    <FaShoppingCart size={35} />
-                    <FaUserAlt size={35} />
-                </section>
-            </div>
-            <br/>
-            <hr></hr>
 
-            <div className='main-carousel'>
-                {<Carousel/>}
-            </div>
-            <br/>
-            <br/>
+            <div className='main-shopping'>
+                <div className='main-logo'>
+                    <section className='logo'>
+                    <h1>
+                        <a href='/'>  
+                        쇼핑몰 메인
+                        </a>
+                    </h1>
+                    </section>
+                    <section className='icon'>
+                        <IoExit size={40}  />
+                        <FaShoppingCart size={35} />
+                        <FaUserAlt size={35} />
+                    </section>
+                </div>
+                <br/>
+                <hr></hr>
 
-            <nav>
-                <Nav/>
-             {/*
-                카테고리 자리
-             */}
-            </nav>
+                <div className='main-carousel'>
+                    {<Carousel/>}
+                </div>
+                <br/>
+                <br/>
+
+                <nav>
+                    <Nav/>
+                    
+                {/*
+                    카테고리 자리
+                */}
+                </nav>
+                <Router>
+                    <div className='Category'>
+                        <Routes>
+                            <Route path='/' element={<ProductList/>}/>
+                        </Routes>
+                        <Routes>
+                            <Route path='/' element={<CategoryList/>}/>
+                        </Routes>
+                        <Routes>
+                            <Route path='/tent' element={<Tent />}/>
+                        </Routes>
+                        <Routes>
+                            <Route path='/sleeping' element={<Sleeping />}/>
+                        </Routes>
+                        <Routes>
+                            <Route path='/shopcart' element={<ShopCart />}/>
+                        </Routes>
+                    </div>
+                </Router>
+            <footer>
+                <div>
+                    <Footer />
             
-            {/*
-                신상품 리스트 
-             */}
 
-            <section>
-                <ProductList/>
-            </section>
+                </div>
+                
+            </footer>
+
+
             
-            <section>
-                <CategoryList/>
-            </section>
-        <fotter>
-            <div>
-                <Footer />
-           
 
             </div>
-            
-        </fotter>
-
-
-        
-
-        </div>
     )
 
 }

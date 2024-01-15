@@ -5,10 +5,12 @@ import img4 from '../img/1.jpg';
 import { CiShoppingBasket } from "react-icons/ci";
 import '../css/ShopMain.css';
 
+
 const CategoryList = () => {
 
     return (
         <div className='category-item' style={{display:'flex', justifyContent:'center'}}>
+            
             <section>
                 <h6 style={{display:'flex',justifyContent:'start'}}>카테고리별 아이템</h6>
                 <ul className='swiper-wrapper'>

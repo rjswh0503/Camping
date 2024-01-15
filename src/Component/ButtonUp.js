@@ -14,7 +14,7 @@ function SideButton({opacity}){
         <div className='btn-up-main'>
             <div opacity={opacity} className="scroll__container">
             <CiSaveUp1 size={50} onClick={MoveToTop} type="button"/> <br/>
-            <FaCartArrowDown size={50} Link to={"/cart"} component={<ShopCart/>} type="button"/>
+            <FaCartArrowDown size={50} Link to="/shopcart" element={<ShopCart/>} type="button"/>
             </div>
         </div>
     );
