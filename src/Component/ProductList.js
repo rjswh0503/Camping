@@ -3,7 +3,6 @@ import img1 from '../img/MainImg/캠핑 메인페이지 이미지.webp';
 import { CiShoppingBasket } from "react-icons/ci";
 import '../css/ShopMain.css';
 
-import axios from 'axios';
 
 const ProductList = () => {
 

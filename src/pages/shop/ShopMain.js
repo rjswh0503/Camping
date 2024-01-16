@@ -2,7 +2,7 @@ import React from 'react';
 import Carousel from '../../Component/Carousel/MainPageCarousel';
 import { FaShoppingCart,FaUserAlt} from "react-icons/fa";
 import { IoExit } from "react-icons/io5";
-import ProductList from '../../Component/ProductList';
+import Main from './Main';
 import Nav from '../../Component/Nav';
 import CategoryList from '../../Component/CategoryList';
 import Footer from '../../Component/Footer';
@@ -67,7 +67,7 @@ const ShopMain = () => {
                         <Router>
                             <div className='Category'>
                                 <Routes>
-                                    <Route path='/' element={<ProductList/>}/>
+                                    <Route path='/' element={<Main/>}/>
                                 </Routes>
                                 <Routes>
                                     <Route path='/' element={<CategoryList/>}/>

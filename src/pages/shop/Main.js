@@ -4,6 +4,7 @@ import '../../css/NewItem.css';
 
 
 
+
 const Main = () => {
   const [product, setProducts] = useState([]);
   const [productId, setProductId]= useState(10);
@@ -32,7 +33,6 @@ const Main = () => {
                               width: "272.5px", 
                               marginright: "30px",
                               }}>
-              
                 <div className='imgWrap'>
                   <a href="">
                   1111

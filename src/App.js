@@ -1,6 +1,6 @@
 
 import './App.css';
-import Main from './pages/shop/Main';
+import Main from './pages/shop/ShopMain';
 
 
 
