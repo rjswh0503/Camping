@@ -1,15 +1,16 @@
 
 import './App.css';
-import ProductDetail from './pages/shop/ProductDetail';
-import Main from './pages/shop/ShopMain';
+import Main from './pages/shop/Main';
 
 
 
 function App() {
   return (
     <div>
-      {/*<Main/>*/}
-      <ProductDetail/>
+      <Main/>
+     {/*<ProductList/>*/}
+
+      
       
     </div>
   );

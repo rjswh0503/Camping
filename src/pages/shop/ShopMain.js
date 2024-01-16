@@ -1,5 +1,4 @@
 import React from 'react';
-
 import Carousel from '../../Component/Carousel/MainPageCarousel';
 import { FaShoppingCart,FaUserAlt} from "react-icons/fa";
 import { IoExit } from "react-icons/io5";
@@ -12,6 +11,8 @@ import Sleeping from './Sleeping';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ShopCart from './ShopCart';
 import Logo from '../../img/MainImg/Logo.png'
+
+
 
 
 const ShopMain = () => {
@@ -30,9 +31,15 @@ const ShopMain = () => {
                             </h1>
                             </section>
                             <section className='icon'>
-                                <IoExit size={40}  />
-                                <FaShoppingCart size={35} />
-                                <FaUserAlt size={35} />
+                                <a href='/'>
+                                <IoExit size={40}/>
+                                </a>
+                                <a href='/'>
+                                    <FaShoppingCart size={35}/>
+                                </a>
+                                <a href='/'>
+                                <FaUserAlt size={35}/>
+                                </a>
                             </section>
                         </div>
                         <br/>

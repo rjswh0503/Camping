@@ -5,7 +5,6 @@ import img4 from '../img/MainImg/1.jpg';
 import { CiShoppingBasket } from "react-icons/ci";
 import '../css/ShopMain.css';
 
-
 const CategoryList = () => {
 
     return (
@@ -18,7 +17,7 @@ const CategoryList = () => {
                         width: "272.5px", 
                         marginright: "30px",
                         }}>
-                        <a href="">
+                        <a href="/">
                         <div className='imgWrap'>
                             <img src={img2} className='imgs'/>
                         </div>
