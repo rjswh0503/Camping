@@ -1,5 +1,6 @@
 
 import './App.css';
+import ShopDetail from './pages/shop/ShopDetail';
 import Main from './pages/shop/ShopMain';
 
 
@@ -7,7 +8,8 @@ import Main from './pages/shop/ShopMain';
 function App() {
   return (
     <div>
-      <Main/>
+      {/*<Main/>*/}
+      <ShopDetail/>
      {/*<ProductList/>*/}
 
       

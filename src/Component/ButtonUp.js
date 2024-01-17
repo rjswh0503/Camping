@@ -2,7 +2,7 @@ import React from 'react';
 import { FaCartArrowDown } from "react-icons/fa";
 import { CiSaveUp1 } from "react-icons/ci";
 import ShopCart from '../pages/shop/ShopCart';
-import '../css/ShopMain.css';
+import '../css/Shop/ShopMain.css';
 
 
 

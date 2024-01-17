@@ -3,7 +3,8 @@ import img2 from '../img/MainImg/123.jpeg';
 import img3 from '../img/MainImg/1234.jpeg';
 import img4 from '../img/MainImg/1.jpg';
 import { CiShoppingBasket } from "react-icons/ci";
-import '../css/ShopMain.css';
+import '../css/Shop/ShopMain.css';
+
 
 const CategoryList = () => {
 
@@ -11,7 +12,7 @@ const CategoryList = () => {
         <div className='category-item' style={{display:'flex', justifyContent:'center'}}>
             
             <section>
-                <h6 style={{display:'flex',justifyContent:'start'}}>카테고리별 아이템</h6>
+            <h2 style={{display:'flex',justifyContent:'center'}}>카테고리별 아이템</h2>
                 <ul className='swiper-wrapper'>
                     <li className='swiper-slide swiper-slide-active'style={{
                         width: "272.5px", 
