@@ -1,6 +1,6 @@
 
 import './App.css';
-import ShopDetail from './pages/shop/ShopDetail';
+import ShopDetail from './pages/shop/ShopDetail/ShopDetail';
 import Main from './pages/shop/ShopMain';
 
 

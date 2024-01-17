@@ -1,18 +1,21 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
-import '../../css/Shop/ShopDetail.css';
-import Logo from '../../img/MainImg/Logo.png';
-import { FaShoppingCart,FaUserAlt} from "react-icons/fa";
-import { IoExit } from "react-icons/io5";
-import Footer from '../../Component/Footer';
-import {BrowserRouter as Router, Routes,Route, } from 'react-router-dom';
-import ShopCart from './ShopCart';
+import '../../../css/Shop/ShopDetail/ShopDetail.css';
+import Footer from '../../../Component/Footer';
+import {BrowserRouter as Router, Routes,Route, Link } from 'react-router-dom';
+import ShopCart from '../ShopCart';
 import { AiFillHeart } from "react-icons/ai";
 import { AiOutlineHeart } from "react-icons/ai";
+import Header from '../../../Component/Header';
+import ShopReview from './ShopReview';
+
 
 
 const ShopDetail = () => {
 
+
+
+    /*  좋아요 */
     const [like, setLike] = useState(false);
 
     const handleHeart = () => {
@@ -22,49 +25,9 @@ const ShopDetail = () => {
 
 
 
-
-
-
-
-
-
-
-
     return(
         <div className='main-shopping'>
-                        <div className='main-logo'>
-                            <section className='logo'>
-                            <h1>
-                                
-                                <a href='/home'>
-                                    <img style={{width:'170px', height:'170px'}} src={Logo}/>
-                                </a>
-                            </h1>
-                            </section>
-                            <section className='icon'>
-                                <a href='/'>
-                                <IoExit size={40}/>
-                                </a>
-                                <a href='/'>
-                                    <FaShoppingCart size={35}/>
-                                </a>
-                                <a href='/'>
-                                <FaUserAlt size={35}/>
-                                </a>
-                            </section>
-                        </div>
-                        <br/>
-                        <hr></hr>
-                        <div>
-                            <Router>
-                                    <Routes>
-                                        <Route path='/shopcart' element={<ShopCart />}/>
-                                    </Routes>
-                            </Router>
-                        </div>
-                        <br/>
-                        <br/>
-        
+        <Header/>
         <div className='main-section1'>
             <div className='main-section2'>
                 <main className='main-section3'>
@@ -72,7 +35,7 @@ const ShopDetail = () => {
                     <section className='right-section'>
                         <div className='right-section2'>무료배송</div>
                         <div className='right-section3'>
-                            <h1 className='right-section-title'>[텐트의자] 편안함</h1>
+                            <h1 className='right-section-title'>[텐트의자] 휴대성과 편안함의 완벽한 조합, 최고급 캠핑 의자</h1>
                             <h2 className='right-section-title2'>라면먹을 때 좋아요!</h2>
                         </div>
                         <h2 className='right-section-title3'>
@@ -136,6 +99,7 @@ const ShopDetail = () => {
                                             </dd>
                             </li>
                         </ul>
+                        
                         <div className='right-section-footer'>
                             <div className='right-section-footer-div'>
                                 <li className='right-section-li'>
@@ -190,7 +154,7 @@ const ShopDetail = () => {
                             <div className='right-section-footer-button'>
                                 <button className='right-section-footer-button-button1' type='button' style={{width:'56',height:'56', radius:'3'}}>
                                     <sapn className='right-section-footer-button-span'>
-                                        <div  onClick={handleHeart}>
+                                        <div className='like'  onClick={handleHeart}>
                                             {like ? (
                                                 <AiFillHeart style={{ color:'red', fontSize:'30px'}}/>
                                             ) :
@@ -214,28 +178,29 @@ const ShopDetail = () => {
                         </div>
                     </section>
                 </main>
-                <nav className='nav-first'>
-                    <ul className='nav-first-ul'>
-                        <li className='nav-first-ul-li'>
-                            <a className='nav-first-ul-li-a'>
+                <Router>
+                    <nav className='nav-first'>
+                        <ul className='nav-first-ul'>
+                            <li className='nav-first-ul-li'>
+                                <a className='nav-first-ul-li-a'>
                                 <sapn className='nav-first-ul-li-a-span'>상세정보</sapn>
-                            </a>
-                        </li>
-                        <li className='nav-first-ul-li'>
-                            <a className='nav-first-ul-li-a'>
-                                <span className='nav-first-ul-li-a-span'>후기</span>
-                                <span className='nav-first-ul-li-a-span-count'></span>
-                            </a>
-                        </li>
-                        <li className='nav-first-ul-li'>
-                            <a className='nav-first-ul-li-a'>
-                                <sapn className='nav-first-ul-li-a-span'>문의</sapn>
-                            </a>
-                        </li>
-                    </ul>
-
-                </nav>
-
+                                
+                                </a>
+                            </li>
+                            <li className='nav-first-ul-li'>
+                                <a className='nav-first-ul-li-a'>
+                                    <span className='nav-first-ul-li-a-span'>후기</span>
+                                    <span className='nav-first-ul-li-a-span-count'></span>
+                                </a>
+                            </li>
+                            <li className='nav-first-ul-li'>
+                                <a className='nav-first-ul-li-a'>
+                                    <sapn className='nav-first-ul-li-a-span'>문의</sapn>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </Router>
             </div>
            <div className='Footer'>
            <Footer/>

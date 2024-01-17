@@ -1,7 +1,5 @@
 import React from 'react';
 import Carousel from '../../Component/Carousel/MainPageCarousel';
-import { FaShoppingCart,FaUserAlt} from "react-icons/fa";
-import { IoExit } from "react-icons/io5";
 import Main from './Main';
 import Nav from '../../Component/Nav';
 import CategoryList from '../../Component/CategoryList';
@@ -9,8 +7,8 @@ import Footer from '../../Component/Footer';
 import Tent from './Tent';
 import Sleeping from './Sleeping';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import ShopCart from './ShopCart';
-import Logo from '../../img/MainImg/Logo.png'
+import Header from '../../Component/Header';
+
 
 
 
@@ -19,44 +17,13 @@ const ShopMain = () => {
 
 
     return (
-            
-                <div className='main-shopping'>
-                        <div className='main-logo'>
-                            <section className='logo'>
-                            <h1>
-                                
-                                <a href='/'>
-                                    <img style={{width:'170px', height:'170px'}} src={Logo}/>
-                                </a>
-                            </h1>
-                            </section>
-                            <section className='icon'>
-                                <a href='/'>
-                                <IoExit size={40}/>
-                                </a>
-                                <a href='/'>
-                                    <FaShoppingCart size={35}/>
-                                </a>
-                                <a href='/'>
-                                <FaUserAlt size={35}/>
-                                </a>
-                            </section>
-                        </div>
-                        <br/>
-                        <hr></hr>
-                        <div className='main-carousel'>
-                            {<Carousel/>}
-                        </div>     
-                        <div>
-                            <Router>
-                                    <Routes>
-                                        <Route path='/shopcart' element={<ShopCart />}/>
-                                    </Routes>
-                            </Router>
-                        </div>
-                        <br/>
-                        <br/>
-
+            <div>
+                <div>
+                <Header/>
+                </div>
+                <div>
+                    <Carousel/>
+                </div>
                         <nav>
                             <Nav/>
                             
