@@ -8,6 +8,9 @@ import { AiFillHeart } from "react-icons/ai";
 import { AiOutlineHeart } from "react-icons/ai";
 import Header from '../../../Component/Header';
 import ShopReview from './ShopReview';
+import ShopMore from './ShopMore';
+import ShopInquiry from './ShopInquiry';
+
 
 
 
@@ -26,9 +29,13 @@ const ShopDetail = () => {
 
 
     return(
+        
         <div className='main-shopping'>
-        <Header/>
+        
+            <Header/>
+         
         <div className='main-section1'>
+        <Router>
             <div className='main-section2'>
                 <main className='main-section3'>
                     <div className='main-img'></div>
@@ -156,7 +163,7 @@ const ShopDetail = () => {
                                     <sapn className='right-section-footer-button-span'>
                                         <div className='like'  onClick={handleHeart}>
                                             {like ? (
-                                                <AiFillHeart style={{ color:'red', fontSize:'30px'}}/>
+                                                <AiFillHeart style={{ color:'#FEA92A', fontSize:'30px'}}/>
                                             ) :
                                             (
                                                 <AiOutlineHeart style={{fontSize: '30px'}}/>
@@ -178,36 +185,49 @@ const ShopDetail = () => {
                         </div>
                     </section>
                 </main>
-                <Router>
+                
                     <nav className='nav-first'>
                         <ul className='nav-first-ul'>
                             <li className='nav-first-ul-li'>
                                 <a className='nav-first-ul-li-a'>
-                                <sapn className='nav-first-ul-li-a-span'>상세정보</sapn>
+                                <Link to='/more'><sapn className='nav-first-ul-li-a-span'>상세정보</sapn></Link>
+                                
                                 
                                 </a>
                             </li>
                             <li className='nav-first-ul-li'>
                                 <a className='nav-first-ul-li-a'>
-                                    <span className='nav-first-ul-li-a-span'>후기</span>
+                                    <Link to='/review'><span className='nav-first-ul-li-a-span'>후기</span></Link>
+                                   
                                     <span className='nav-first-ul-li-a-span-count'></span>
                                 </a>
                             </li>
                             <li className='nav-first-ul-li'>
                                 <a className='nav-first-ul-li-a'>
-                                    <sapn className='nav-first-ul-li-a-span'>문의</sapn>
+                                   <Link to='/inquiry'><sapn className='nav-first-ul-li-a-span'>문의</sapn></Link>
                                 </a>
                             </li>
                         </ul>
                     </nav>
-                </Router>
+                
             </div>
            <div className='Footer'>
+            <Routes>
+                <Route path='/review' element={<ShopReview/>}/>
+            </Routes>
+            <Routes>
+                <Route path='/more' element={<ShopMore/>}/>
+            </Routes>
+            <Routes>
+                <Route path='/inquiry' element={<ShopInquiry/>}/>
+            </Routes>
            <Footer/>
            </div>
-
+           </Router> 
             </div>
+           
         </div>
+        
 
 
 
