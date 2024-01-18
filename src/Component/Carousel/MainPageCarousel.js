@@ -5,7 +5,6 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-
 const MainPageCarousel = () => {
   const settings = {
     dots: true,
@@ -15,7 +14,6 @@ const MainPageCarousel = () => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 5000,
-    
   };
 
   return (
@@ -25,21 +23,21 @@ const MainPageCarousel = () => {
           <img
             src={img1}
             alt='Slide 1'
-            style={{ width: '55%', height: 'auto', maxHeight: '400px', margin: '0 auto' }}
+            style={{ width: '55%', height: 'auto', maxHeight: '600px', margin: '0 auto' }}
           />
         </div>
         <div>
           <img
             src={img2}
             alt='Slide 2'
-            style={{ width: '55%', height: 'auto', maxHeight: '400px', margin: '0 auto' }}
+            style={{ width: '55%', height: 'auto', maxHeight: '600px', margin: '0 auto' }}
           />
         </div>
         <div>
           <img
             src={img1}
             alt='Slide 3'
-            style={{ width: '55%', height: 'auto', maxHeight: '400px', margin: '0 auto' }}
+            style={{ width: '55%', height: 'auto', maxHeight: '600px', margin: '0 auto' }}
           />
         </div>
       </Slider>
