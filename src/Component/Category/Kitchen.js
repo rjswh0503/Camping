@@ -2,14 +2,14 @@ import React from 'react';
 
 
 
-function Tent() {
+function Kitchen() {
 
     return(
         <div>
-            <h1>텐트</h1>
+            <h1>주방/식기</h1>
         </div>
     )
 
 }
 
-export default Tent;
+export default Kitchen;
