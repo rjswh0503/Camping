@@ -105,7 +105,7 @@ const ShopDetail = () => {
           </div>
           <div className='Footer'>
             <Routes>
-              <Route path='/review' element={<ShopReview/>}/>
+              <Route path='/review' element={<ShopReview productId={productId}/>}/>
             </Routes>
             <Routes>
               <Route path='/more' element={<ShopMore/>}/>

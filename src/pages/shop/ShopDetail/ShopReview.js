@@ -1,9 +1,6 @@
-// CommentForm.js
-
 import React, { useState } from 'react';
 
-
-const CommentForm = () => {
+const CommentForm = ({ productId }) => {
   const [name, setName] = useState('');
   const [comment, setComment] = useState('');
   const [comments, setComments] = useState([]);
@@ -11,10 +8,10 @@ const CommentForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // 새로운 덧글 생성
-    const newComment = { id: Date.now(), name, comment };
+    // productId를 포함한 새 댓글 생성
+    const newComment = { id: Date.now(), productId, name, comment };
 
-    // 이전 덧글들에 새로운 덧글 추가
+    // 이전 댓글 목록에 새 댓글 추가
     setComments([...comments, newComment]);
 
     // 폼 초기화
