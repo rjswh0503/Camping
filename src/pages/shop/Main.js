@@ -1,11 +1,14 @@
+// Main.jsx
+
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom"; // Link 추가
 import '../../css/Shop/ShopMain.css';
 import { CiShoppingBasket } from "react-icons/ci"; 
 
 const Main = () => {
   const [products, setProducts] = useState([]);
-  const [productIds, setProductIds] = useState([26, 24, 1, 3, 4]); // Example: an array of product IDs
+  const [productIds, setProductIds] = useState([26, 24, 1, 3, 4]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -31,13 +34,14 @@ const Main = () => {
         <div>
           {products.map((product) => (
             <section key={product.productId}>
-              <h2 style={{ display: 'flex', justifyContent: 'center' }}>New Item</h2><br />
-              <ul className='swiper-wrapper'>
-                <li className='swiper-slide swiper-slide-active' style={{
-                  width: "272.5px",
-                  marginright: "30px",
-                }}>
-                  <a href='/'>
+              {/* Link 추가 */}
+              <Link to={`/detail/${product.productId}`}>
+                <h2 style={{ display: 'flex', justifyContent: 'center' }}>New Item</h2><br />
+                <ul className='swiper-wrapper'>
+                  <li className='swiper-slide swiper-slide-active' style={{
+                    width: "272.5px",
+                    marginright: "30px",
+                  }}>
                     <div className='imgWrap'>
                       <img src={product.productThumbnail} className="imgs" alt={product.productName} />
                     </div>
@@ -51,20 +55,9 @@ const Main = () => {
                         </div>
                       </div>
                     </div>
-                  </a>
-                  <div className="itemFotter clearfix">
-                    <div className="f1">
-                      <span className="basketBtn">
-                        <a href="/">
-                          <CiShoppingBasket size={20} />
-                        </a>
-                      </span>
-                      <span className="reviewCnt">리뷰1</span>
-                    </div>
-                    <div className="fr"></div>
-                  </div>
-                </li>
-              </ul>
+                  </li>
+                </ul>
+              </Link>
             </section>
           ))}
         </div>

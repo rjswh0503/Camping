@@ -38,7 +38,7 @@ const ShopMain = () => {
                         <Router>
                             <div className='Category'>
                                 <Routes>
-                                    <Route path='/home/productId/1' element={<Main/>}/>
+                                    <Route path='/home' element={<Main/>}/>
                                 </Routes>
                                 <Routes>
                                     <Route path='/home' element={<CategoryList/>}/>

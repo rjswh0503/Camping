@@ -7,7 +7,7 @@ import ShopMain from './shop/ShopMain';
 
 const Main = () => {
   const redirectToShop = () => {
-    window.location.href = '/shop';
+    window.location.href = '/home';
   };
 
   return (
