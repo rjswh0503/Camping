@@ -1,17 +1,36 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
-const ShopMore = () => {
-    return (
-        <div>
-            <h2>상품 상세정보</h2>
-            
-            <img
-                src="https://m.cereshome.co.kr/web/product/big/202107/259b2fc7f347f1f0a474f85eae968136.jpg"
-                alt="Product Details"
-                style={{ width: '100%', height: 'auto' }}
-            />
-        </div>
-    );
+const ShopMore = ({ productId }) => {
+  const [productContent, setproductContent] = useState(null);
+
+  useEffect(() => {
+    const fetchProductImage = async () => {
+      try {
+        const response = await axios.get(`http://localhost:8080/main/product/image/${productId}`);
+        setproductContent(response.data.image);
+      } catch (error) {
+        console.error('Error fetching product image', error);
+      }
+    };
+
+    fetchProductImage();
+  }, [productId]);
+
+  return (
+    <div>
+      <h2>상품 상세정보</h2>
+      
+      {productContent && (
+        <img
+          src={productContent}
+          alt="Product Details"
+          style={{ width: '100%', height: 'auto' }}
+        />
+      )}
+    </div>
+  );
 }
 
 export default ShopMore;
+

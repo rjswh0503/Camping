@@ -10,7 +10,7 @@ function App() {
   return (
     <div>
       <Main/>
-      {/*<ShopDetail/>*/}
+      <ShopDetail/>
       {/*<OrderMain/>*/}
       {/*<AddMain/>*/}
       {/*<SellMain/>*/}      

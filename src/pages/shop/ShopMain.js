@@ -24,8 +24,6 @@ const ShopMain = () => {
     return (
        
             <div>
-             
-            
                 <div>
                 <Header/>
                 </div>

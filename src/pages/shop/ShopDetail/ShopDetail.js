@@ -48,43 +48,25 @@ const ShopDetail = () => {
                       <h1 className='right-section-title'>{product.productName}</h1>
                       <h2 className='right-section-title2'>{product.productDescription}</h2>
                     </div>
-                    <h2 className='right-section-title3'>
-                      <sapn className='right-section-sapn'>
-                        {product.discountRate} %
-                      </sapn>
-                      <sapn className='right-section-sapn2'>{product.discountedPrice}</sapn>
-                      <sapn className='right-section-sapn3'>원</sapn>
-                    </h2>
                     <span className='right-section-sapn4'>
-                      <span>{product.originalPrice} 원</span>
+                      <span>{product.productPrice} 원</span>
                     </span>
-                    <p className='right-section-p'>
-                      원산지:
-                      {product.origin}
-                    </p>
                     <div className='right-section-login'>
                       로그인 후, 적립 혜택이 제공됩니다.
                     </div>
                     <div>
                       <div className='right-section-img'>
-                        <img src={product.productImage} alt={product.productName} />
+                        <img src={product.productThumbnail} alt={product.productName} />
                       </div>
                     </div>
                     <ul className='right-section-ul'>
                       <li className='right-section-li'>
                         <dt className='right-section-dt'>배송</dt>
-                        <dd className='right-section-dd'>
-                          <p className='right-section-dd-p'>{product.deliveryInfo}</p>
-                          <p className='right-section-dd-p'>
-                            {product.deliveryTime}
-                          </p>
-                        </dd>
+                        
                       </li>
-                      {/* 나머지 상품 정보 항목들도 유사하게 표시 */}
                     </ul>
 
                     <div className='right-section-footer'>
-                      {/* 나머지 구현 부분도 적절히 작성 */}
                       <button className='right-section-footer-button1' type='button' style={{width:'56',height:'56', radius:'3'}}>
                         <sapn className='right-section-footer-button-span'>
                           <div className='like'  onClick={handleHeart}>
