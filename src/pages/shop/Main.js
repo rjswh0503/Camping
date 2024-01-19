@@ -8,7 +8,7 @@ import img1 from '../../img/MainImg/3.jpg';
 
 const Main = () => {
   const [product, setProducts] = useState([]);
-  const [productId, setProductId]= useState(12);
+  const [productId, setProductId]= useState(24);
   useEffect(() => {
     axios
       .get(`http://localhost:8080/main/mainpage/${productId}`)
