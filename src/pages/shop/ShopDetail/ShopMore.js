@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 const ShopMore = ({ productId }) => {
-  const [productContent, setproductContent] = useState(null);
+  const [productContent, setproductContent] = useState([]);
 
   useEffect(() => {
     const fetchProductImage = async () => {

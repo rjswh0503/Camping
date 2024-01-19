@@ -11,8 +11,8 @@ import ShopMore from './ShopMore';
 import ShopInquiry from './ShopInquiry';
 
 const ShopDetail = () => {
-  const { productId } = useParams(); // Use the productId from the route params
-  const [product, setProduct] = useState(null);
+  const { productId } = useParams();
+  const [product, setProduct] = useState();
   const [like, setLike] = useState(false);
 
   useEffect(() => {
@@ -79,7 +79,6 @@ const ShopDetail = () => {
                           </div>
                         </sapn>
                       </button>
-                      {/* 나머지 버튼 및 상품 정보 표시 */}
                     </div>
                   </section>
                 </>
@@ -91,7 +90,7 @@ const ShopDetail = () => {
             <nav className='nav-first'>
               <ul className='nav-first-ul'>
                 <li className='nav-first-ul-li'>
-                  <Link to='/more'><span className='nav-first-ul-li-a-span'>상세정보</span></Link>
+                  <Link to='/more/44'><span className='nav-first-ul-li-a-span'>상세정보</span></Link>
                 </li>
                 <li className='nav-first-ul-li'>
                   <Link to='/review'><span className='nav-first-ul-li-a-span'>후기</span></Link>
@@ -108,7 +107,7 @@ const ShopDetail = () => {
               <Route path='/review' element={<ShopReview productId={productId}/>}/>
             </Routes>
             <Routes>
-              <Route path='/more' element={<ShopMore/>}/>
+              <Route path='/more' element={<ShopMore productId={productId}/>}/>
             </Routes>
             <Routes>
               <Route path='/inquiry' element={<ShopInquiry/>}/>

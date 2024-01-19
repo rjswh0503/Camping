@@ -37,6 +37,7 @@
 }
 
 .clearfix {
+    padding-top: 100px;
     display: flex;
     justify-content: center;
 }
@@ -67,17 +68,18 @@
 .swiper-wrapper {
     position: relative;
     width: 100%;
+    float: left;
     height: 100%;
     z-index: 1;
     display: flex;
     transition-property: transform;
     box-sizing: content-box;
-    
 }
 
 .hr {
     margin-bottom: 100px;
 }
+
 
 
 li {
@@ -154,6 +156,10 @@ ul li .textWrap .itemsPrice {
 }
 .fr {
     float: right;
+}
+
+.newItem-section {
+    margin-top: 50px;
 }
 
 ul li .textWrap .itemsPrice .customerPrice{
