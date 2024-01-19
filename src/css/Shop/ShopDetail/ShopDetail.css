@@ -496,6 +496,7 @@ button {
     display: flex;
     flex-wrap: wrap;
     height: 60px;
+    
    
 }
 
@@ -538,9 +539,11 @@ a {
 
 
 .nav-first-ul-li-a-span {
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 500;
     color: #666;
+    text-align: center;
+
 
 }
 

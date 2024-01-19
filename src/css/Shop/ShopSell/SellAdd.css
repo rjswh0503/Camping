@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+/* Add the following styles to your existing CSS file or create a new one */
+>>>>>>> 65bee7085b6645efd8d1ab2ec62fdd1f3cf0173a
 
 .sell-add-form {
     max-width: 600px;
@@ -5,11 +9,17 @@
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 8px;
+<<<<<<< HEAD
+=======
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+>>>>>>> 65bee7085b6645efd8d1ab2ec62fdd1f3cf0173a
 }
 
 .sell-add-form h2 {
     font-size: 24px;
     margin-bottom: 20px;
+<<<<<<< HEAD
 }
 
 .sell-add-form label {
@@ -27,6 +37,30 @@
 }
 
 .sell-add-form button {
+=======
+    color: #333;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+input,
+textarea,
+file {
+    width: 100%;
+    padding: 10px;
+    margin-top: 4px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+>>>>>>> 65bee7085b6645efd8d1ab2ec62fdd1f3cf0173a
     background-color: #FEA92A;
     color: #fff;
     padding: 10px;
@@ -35,6 +69,10 @@
     cursor: pointer;
 }
 
+<<<<<<< HEAD
 .sell-add-form button:hover {
+=======
+button:hover {
+>>>>>>> 65bee7085b6645efd8d1ab2ec62fdd1f3cf0173a
     background-color: #FEA92A;
 }

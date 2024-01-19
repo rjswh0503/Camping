@@ -4,8 +4,9 @@ import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 
 function Nav() {
   return (
-    <Router>
+   
       <div>
+        <Router>
         <div className='main-category'>
           <div className='contentsWrap'>
             <ul className='clearfix'>
@@ -16,7 +17,7 @@ function Nav() {
                 </Link>
               </li>
               <li className='f1'>
-                <Link to="/sleeping" target='_blank'rel="noopener noreferrer">
+                <Link to="/sleeping" rel="noopener noreferrer">
                   <img src='https://www.ocamall.com/design/ocamall/2022_renew/img/main_category_icon_02.png' alt="침낭 아이콘" />
                   <span>침낭</span>
                 </Link>
@@ -48,8 +49,9 @@ function Nav() {
             </ul>
           </div>
         </div>
+        </Router>
       </div>
-    </Router>
+    
   );
 }
 
