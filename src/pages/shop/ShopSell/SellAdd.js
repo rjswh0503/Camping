@@ -2,11 +2,8 @@
 
 import React, { useState } from 'react';
 import axios from 'axios';
-<<<<<<< HEAD
-=======
 import '../../../css/Shop/ShopSell/SellAdd.css';
 
->>>>>>> 65bee7085b6645efd8d1ab2ec62fdd1f3cf0173a
 
 
 const SellAdd = () => {
