@@ -8,7 +8,7 @@ import { CiShoppingBasket } from "react-icons/ci";
 
 const Main = () => {
   const [products, setProducts] = useState([]);
-  const [productIds, setProductIds] = useState([26, 24, 1, 3, 4]);
+  const [productIds, setProductIds] = useState([46, 44]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -29,18 +29,22 @@ const Main = () => {
   }, [productIds]);
 
   return (
+    <div className="newItem-section">
     <div className='category-item' style={{ display: 'flex', justifyContent: 'center' }}>
+    
+    
       {products.length > 0 ? (
         <div>
+          <h2 style={{ display: 'flex', justifyContent: 'flex-start' }}>New Items</h2>
           {products.map((product) => (
-            <section key={product.productId}>
-              {/* Link 추가 */}
+            
+            <section style={{float:'left'}} key={product.productId}>
               <Link to={`/detail/${product.productId}`}>
-                <h2 style={{ display: 'flex', justifyContent: 'center' }}>New Item</h2><br />
                 <ul className='swiper-wrapper'>
                   <li className='swiper-slide swiper-slide-active' style={{
                     width: "272.5px",
                     marginright: "30px",
+                    
                   }}>
                     <div className='imgWrap'>
                       <img src={product.productThumbnail} className="imgs" alt={product.productName} />
@@ -50,8 +54,7 @@ const Main = () => {
                       <p className="itemName1">{product.productDescription}</p>
                       <div className="itemsPrice clearfix">
                         <div className="fr">
-                          <strong className="customerPrice"><del style={{ color: 'red' }}>30,000</del></strong>
-                          <strong className="sellPrice">{product.productPrice}</strong>
+                          <strong className="sellPrice">{product.productPrice}원</strong>
                         </div>
                       </div>
                     </div>
@@ -65,6 +68,7 @@ const Main = () => {
         <p>상품을 찾을 수 없습니다.</p>
       )}
     </div>
+  </div> 
   );
 };
 
