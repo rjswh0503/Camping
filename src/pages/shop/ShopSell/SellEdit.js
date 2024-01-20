@@ -1,11 +1,11 @@
-// SellList.jsx
+
 
 import React, { useState } from 'react';
 import '../../../css/Shop/ShopSell/SellEdit.css';
 
 const productsData = [
     { id: 1, image: 'image_url_1', name: 'Product 1', price: '$100', category: 'Category 1', status: 'Active', stock: 50, date: '2024-01-18' },
-    // Add more products as needed
+    
 ];
 
 const SellList = () => {
@@ -21,13 +21,10 @@ const SellList = () => {
     );
 
     const handleEdit = (productId) => {
-        // Implement the edit logic based on the productId
         console.log(`Edit product with ID ${productId}`);
     };
 
     const handleDelete = (productId) => {
-        // Implement the delete logic based on the productId
-        // For example, you can use setProducts to update the state after deletion
         setProducts((prevProducts) => prevProducts.filter((product) => product.id !== productId));
         console.log(`Delete product with ID ${productId}`);
     };

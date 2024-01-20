@@ -1,4 +1,4 @@
-// Main.jsx
+
 
 import React, { useState, useEffect } from "react";
 import axios from "axios";
@@ -8,14 +8,14 @@ import { CiShoppingBasket } from "react-icons/ci";
 
 const Main = () => {
   const [products, setProducts] = useState([]);
-  const [productIds, setProductIds] = useState([46, 44]);
+  const [productIds, setProductIds] = useState([46,44,49]);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const productData = await Promise.all(
           productIds.map(async (productId) => {
-            const response = await axios.get(`http://localhost:8080/main/mainpage/${productId}`);
+            const response = await axios.get(`http://localhost:8080/main/view/${productId}`);
             return response.data;
           })
         );
@@ -39,7 +39,7 @@ const Main = () => {
           {products.map((product) => (
             
             <section style={{float:'left'}} key={product.productId}>
-              <Link to={`/detail/${product.productId}`}>
+              <Link to={`/detail/item/${product.productId}`}>
                 <ul className='swiper-wrapper'>
                   <li className='swiper-slide swiper-slide-active' style={{
                     width: "272.5px",

@@ -12,6 +12,7 @@ import Kitchen from '../../Component/Category/Kitchen';
 import Led from '../../Component/Category/Led';
 import Table from '../../Component/Category/Table';
 import BBQ from '../../Component/Category/BBQ';
+import Search from '../../Component/Search';
 
 
 
@@ -32,6 +33,7 @@ const ShopMain = () => {
                 </div>
                         <nav>
                             <Nav/>
+                            <Search/>
                         </nav>
                         <Router>
                             <div className='Category'>

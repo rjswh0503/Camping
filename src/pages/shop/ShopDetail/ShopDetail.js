@@ -16,12 +16,12 @@ const ShopDetail = () => {
   const [like, setLike] = useState(false);
 
   useEffect(() => {
-    const fetchData = async () => {
+    const fetchData = async (productId) => {
       try {
-        const response = await axios.get(`http://localhost:8080/main/product/${productId}`);
-        setProduct(response.data);
+        const response = await axios.get(`http://localhost:8080/detail/item/${productId}`);
+        return {...response.data,productId};
       } catch (error) {
-        console.error("Error fetching product details", error);
+        console.error("상품 세부 정보를 불러오는 중 오류 발생", error);
       }
     };
 
