@@ -1,5 +1,7 @@
+// Tent.js
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom"; // Link 추가
 import '../../css/Shop/ShopMain.css';
 import { CiShoppingBasket } from "react-icons/ci"; 
 
@@ -37,7 +39,8 @@ const Tent = () => {
                   width: "272.5px",
                   marginright: "30px",
                 }}>
-                  <a href={`/detail/item/${product.productId}`}>
+                  
+                  <Link to={`/detail/item/${product.productId}`}>
                     <div className='imgWrap'>
                       <img src={product.productThumbnail} className="imgs" alt={product.productName} />
                     </div>
@@ -50,7 +53,7 @@ const Tent = () => {
                         </div>
                       </div>
                     </div>
-                  </a>
+                  </Link>
                   <div className="itemFotter clearfix">
                     <div className="fr"></div>
                   </div>

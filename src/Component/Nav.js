@@ -1,12 +1,16 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
-
-
-function Nav() {
+import Tent from '../Component/Category/Tent';
+import Sleeping from '../Component/Category/Sleeping';
+import Kitchen from '../Component/Category/Kitchen';
+import Led from '../Component/Category/Led';
+import Table from '../Component/Category/Table';
+import BBQ from '../Component/Category/BBQ';
+import Main from '../pages/shop/Main';
+function Nav( ) {
   return (
    
       <div>
-        <Router>
         <div className='main-category'>
           <div className='contentsWrap'>
             <ul className='clearfix'>
@@ -49,9 +53,34 @@ function Nav() {
             </ul>
           </div>
         </div>
-        </Router>
+        <Routes>
+              <Route path='/' element={<Main/>} />
+          </Routes>
+          
+          <Routes>
+            <Route path='/tent' element={<Tent/>} />
+            </Routes>
+
+            <Routes>
+            <Route path='/sleeping' element={<Sleeping/>} />
+            </Routes>
+
+            <Routes>
+            <Route path='/led' element={<Led/>} />
+            </Routes>
+
+            <Routes>
+            <Route path='/bbq' element={<BBQ/>} />
+            </Routes>
+
+            <Routes>
+            <Route path='/table' element={<Table/>} />
+            </Routes>
+
+            <Routes>
+            <Route path='/kitchen' element={<Kitchen/>} />
+          </Routes>
       </div>
-    
   );
 }
 

@@ -2,13 +2,15 @@
 
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom"; // Link 추가
+import { Router, Routes,Route,Link } from "react-router-dom"; // Link 추가
 import '../../css/Shop/ShopMain.css';
 import { CiShoppingBasket } from "react-icons/ci"; 
+import CategoryList from "../../Component/CategoryList";
+import ShopDetail from "./ShopDetail/ShopDetail";
 
 const Main = () => {
   const [products, setProducts] = useState([]);
-  const [productIds, setProductIds] = useState([46,44,49]);
+  const [productIds, setProductIds] = useState([46,44]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -60,6 +62,10 @@ const Main = () => {
                     </div>
                   </li>
                 </ul>
+                
+                  <Routes>
+                    <Route path="/detail/item/:productId" element={<ShopDetail/>}/>
+                  </Routes>
               </Link>
             </section>
           ))}
@@ -68,6 +74,7 @@ const Main = () => {
         <p>상품을 찾을 수 없습니다.</p>
       )}
     </div>
+    <CategoryList/>
   </div> 
   );
 };

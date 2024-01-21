@@ -4,7 +4,7 @@ import { CiSaveUp1 } from "react-icons/ci";
 import ShopCart from '../pages/shop/ShopCart';
 import '../css/Shop/ShopMain.css';
 import img1 from '../img/icons8-2-위-원-48.png'
-
+import {Link} from 'react-router-dom';
 
 function SideButton({opacity}){
     const MoveToTop = () => {
@@ -12,10 +12,12 @@ function SideButton({opacity}){
     } ;
     
     return (
-        <div className='btn-up-main'>
+        <div style={{cursor:'pointer'}} className='btn-up-main'>
             <div opacity={opacity} className="scroll__container">
             <img src={img1}  onClick={MoveToTop} type="button"/> <br/>
-            <FaCartArrowDown size={50} Link to="/shopcart" element={<ShopCart/>} type="button"/>
+            <Link to ="/cart" element="{<ShopCart>}">
+                <FaCartArrowDown size={50}  type="button"/> 
+            </Link> 
             </div>
         </div>
     );

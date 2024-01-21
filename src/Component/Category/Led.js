@@ -5,7 +5,7 @@ import { CiShoppingBasket } from "react-icons/ci";
 
 const Led = () => {
   const [products, setProducts] = useState([]);
-  const [productCategory, setProductCategory] = useState(["램프"]); // Example: an array of product IDs
+  const [productCategory, setProductCategory] = useState(["램프"]);
 
   useEffect(() => {
     const fetchData = async () => {
