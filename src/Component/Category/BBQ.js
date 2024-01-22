@@ -1,45 +1,38 @@
 // Tent.js
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom"; // Link 추가
+import { Link } from "react-router-dom";
 import '../../css/Shop/ShopMain.css';
 import { CiShoppingBasket } from "react-icons/ci"; 
 
-const BBQ = () => {
+const Tent = () => {
   const [products, setProducts] = useState([]);
-  const [productCategory, setProductCategory] = useState(["bbq"]);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const productData = await Promise.all(
-            productCategory.map(async (productCategory) => {
-            const response = await axios.get(`http://localhost:8080/category/main/${productCategory}`);
-            return { ...response.data, productCategory };
-          })
-        );
-        setProducts(productData);
+        const response = await axios.get("http://localhost:8080/category/main/bbq");
+        setProducts(response.data);
       } catch (error) {
         console.error("상품을 불러오는 중 에러 발생", error);
       }
     };
 
     fetchData();
-  }, [productCategory]);
+  }, []);
 
   return (
     <div className='category-item' style={{ display: 'flex', justifyContent: 'center' }}>
       {products.length > 0 ? (
         <div>
-          {products.map((product) => (
-            <section key={product.productCategory}>
-              <h2 style={{ display: 'flex', justifyContent: 'center' }}>{product.productCategory}</h2><br />
-              <ul className='swiper-wrapper'>
-                <li className='swiper-slide swiper-slide-active' style={{
+          <section>
+            <h2 style={{ display: 'flex', justifyContent: 'center' }}>{products[0].productCategory}</h2><br />
+            <ul className='swiper-wrapper'>
+              {products.map((product) => (
+                <li key={product.productId} className='swiper-slide swiper-slide-active' style={{
                   width: "272.5px",
-                  marginright: "30px",
+                  marginRight: "30px",
                 }}>
-                  
                   <Link to={`/detail/${product.productId}`}>
                     <div className='imgWrap'>
                       <img src={product.productThumbnail} className="imgs" alt={product.productName} />
@@ -49,7 +42,7 @@ const BBQ = () => {
                       <p className="itemName1">{product.productDescription}</p>
                       <div className="itemsPrice clearfix">
                         <div className="fr">
-                          <strong className="sellPrice">{product.productPrice}</strong>
+                          <strong className="sellPrice">{product.productPrice}원</strong>
                         </div>
                       </div>
                     </div>
@@ -58,9 +51,9 @@ const BBQ = () => {
                     <div className="fr"></div>
                   </div>
                 </li>
-              </ul>
-            </section>
-          ))}
+              ))}
+            </ul>
+          </section>
         </div>
       ) : (
         <p>상품을 찾을 수 없습니다.</p>
@@ -69,4 +62,4 @@ const BBQ = () => {
   );
 };
 
-export default BBQ;
+export default Tent;
