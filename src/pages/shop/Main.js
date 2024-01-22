@@ -10,7 +10,7 @@ import ShopDetail from "./ShopDetail/ShopDetail";
 
 const Main = () => {
   const [products, setProducts] = useState([]);
-  const [productIds, setProductIds] = useState([46,44]);
+  const [productIds, setProductIds] = useState([55,59,61,65]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -41,7 +41,7 @@ const Main = () => {
           {products.map((product) => (
             
             <section style={{float:'left'}} key={product.productId}>
-              <Link to={`/detail/item/${product.productId}`}>
+              <Link to={`/detail/${product.productId}`}>
                 <ul className='swiper-wrapper'>
                   <li className='swiper-slide swiper-slide-active' style={{
                     width: "272.5px",
@@ -64,7 +64,7 @@ const Main = () => {
                 </ul>
                 
                   <Routes>
-                    <Route path="/detail/item/:productId" element={<ShopDetail/>}/>
+                    <Route path="/detail/" element={<ShopDetail/>}/>
                   </Routes>
               </Link>
             </section>
@@ -74,7 +74,7 @@ const Main = () => {
         <p>상품을 찾을 수 없습니다.</p>
       )}
     </div>
-    <CategoryList/>
+    
   </div> 
   );
 };

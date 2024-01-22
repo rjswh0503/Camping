@@ -7,10 +7,12 @@ import Led from '../Component/Category/Led';
 import Table from '../Component/Category/Table';
 import BBQ from '../Component/Category/BBQ';
 import Main from '../pages/shop/Main';
+import Carousel from './Carousel/MainPageCarousel';
 function Nav( ) {
   return (
    
       <div>
+        
         <div className='main-category'>
           <div className='contentsWrap'>
             <ul className='clearfix'>
@@ -53,9 +55,7 @@ function Nav( ) {
             </ul>
           </div>
         </div>
-        <Routes>
-              <Route path='/' element={<Main/>} />
-          </Routes>
+        
           
           <Routes>
             <Route path='/tent' element={<Tent/>} />

@@ -8,6 +8,7 @@ import { Link, Routes, Route } from 'react-router-dom';
 import ShopCart from '../pages/shop/ShopCart';
 import ShopMain from '../pages/shop/ShopMain';
 import Search from '../Component/Search';
+import  Carousel from '../Component/Carousel/MainPageCarousel';
 
 const Header = () => {
   return (
@@ -15,7 +16,7 @@ const Header = () => {
       <div className='main-logo'>
         <section className='logo'>
           <h1>
-            <Link to='/main'>
+            <Link to='/'>
               <img style={{ width: '170px', height: '170px' }} src={Logo} />
             </Link>
           </h1>
@@ -35,10 +36,7 @@ const Header = () => {
           </Link>
         </section>
       </div>
-      <br />
       <hr></hr>
-      <br />
-      <br />
     </div>
   );
 };

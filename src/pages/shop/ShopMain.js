@@ -5,7 +5,7 @@ import Nav from '../../Component/Nav';
 import CategoryList from '../../Component/CategoryList';
 import Footer from '../../Component/Footer';
 import Header from '../../Component/Header';
-
+import Main from '../shop/Main';
 
 const ShopMain = () => {
   
@@ -14,9 +14,13 @@ const ShopMain = () => {
     
     <div>
       <div>
-        <Carousel />
+      <Carousel/>
       </div>
-     
+      <div>
+        <Main/>
+        <CategoryList/>
+    
+      </div>
       
     </div>
   );

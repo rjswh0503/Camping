@@ -6,9 +6,8 @@ import '../../css/Shop/ShopMain.css';
 import { CiShoppingBasket } from "react-icons/ci"; 
 
 const Table = () => {
-  const [products, setProducts] = useState([]);
-  const [productCategory, setProductCategory] = useState(["의자"]);
-
+  const [productCategory, setProductCategory] = useState(["table"]);
+  const [productId, setProductId] = useState([]);
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -29,9 +28,9 @@ const Table = () => {
 
   return (
     <div className='category-item' style={{ display: 'flex', justifyContent: 'center' }}>
-      {products.length > 0 ? (
+      {productId.length > 0 ? (
         <div>
-          {products.map((product) => (
+          {productId.map((product) => (
             <section key={product.productCategory}>
               <h2 style={{ display: 'flex', justifyContent: 'center' }}>{product.productCategory}</h2><br />
               <ul className='swiper-wrapper'>
@@ -40,7 +39,7 @@ const Table = () => {
                   marginright: "30px",
                 }}>
                   
-                  <Link to={`/detail/item/${product.productId}`}>
+                  <Link to={`/detail/${productId}`}>
                     <div className='imgWrap'>
                       <img src={product.productThumbnail} className="imgs" alt={product.productName} />
                     </div>

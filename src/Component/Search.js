@@ -41,7 +41,7 @@ const Search = () => {
           marginLeft: '10px',
           padding: '10px',
           borderRadius: '20px',
-          backgroundColor: '#007BFF',
+          backgroundColor: '##FEA92A',
           color: '#fff',
           border: 'none',
           cursor: 'pointer',

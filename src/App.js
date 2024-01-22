@@ -13,22 +13,24 @@ import Footer from './Component/Footer';
 import Nav from './Component/Nav';
 import ShopCart from './pages/shop/ShopCart';
 import ShopMain from './pages/shop/ShopMain';
-import Carousel from './Component/Carousel/MainPageCarousel';
-import CategoryList from './Component/CategoryList';
+import ShopMyPage from './pages/shop/ShopMyPage/ShopMyPage';
+import Tent from './Component/Category/Tent';
+
+
+
 
 function App() {
   return (
     <Router>
       <div>
         <Header/>
-          <Nav/>
+        <Nav/>
           <Routes>
-            <Route path="/" element={<ShopMain/>}/>
-            <Route path="/main" element={<Main/>} />
-            <Route path="/main/category" element={<CategoryList/>}/>
+            <Route path="/" element={<ShopMain/>} />
             <Route path="/detail" element={<ShopDetail/>} />
             <Route path="/order" element={<OrderMain/>} />
             <Route path="/sell" element={<SellMain/>} />
+            <Route path="/mypage" element={<ShopMyPage/>}/>
             <Route path="/cart" element={<ShopCart/>} />
           </Routes>
         <Footer/>

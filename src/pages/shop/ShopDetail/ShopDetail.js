@@ -11,15 +11,15 @@ import ShopMore from './ShopMore';
 import ShopInquiry from './ShopInquiry';
 
 const ShopDetail = () => {
-  const { productId, setProductId } = useParams();
-  const [product, setProduct] = useState();
+  const { productId } = useParams();
+  const [product, setProduct] = useState(null);
   const [like, setLike] = useState(false);
 
   useEffect(() => {
     const fetchData = async (productId) => {
       try {
-        const response = await axios.get(`http://localhost:8080/detail/item/${productId}`);
-        setProductId(response.data);
+        const response = await axios.get(`http://localhost:8080/detail/${productId}`);
+        setProduct(response.data);
       } catch (error) {
         console.error("상품 세부 정보를 불러오는 중 오류 발생", error);
       }
@@ -89,7 +89,7 @@ const ShopDetail = () => {
             <nav className='nav-first'>
               <ul className='nav-first-ul'>
                 <li className='nav-first-ul-li'>
-                  <Link to='/more/:productId'><span className='nav-first-ul-li-a-span'>상세정보</span></Link>
+                  <Link to='/more/'><span className='nav-first-ul-li-a-span'>상세정보</span></Link>
                 </li>
                 <li className='nav-first-ul-li'>
                   <Link to='/review'><span className='nav-first-ul-li-a-span'>후기</span></Link>
@@ -102,15 +102,11 @@ const ShopDetail = () => {
             </nav>
           </div>
           <div className='Footer'>
-            <Routes>
+          <Routes>
               <Route path='/review' element={<ShopReview productId={productId}/>}/>
-            </Routes>
-            <Routes>
               <Route path='/more' element={<ShopMore productId={productId}/>}/>
-            </Routes>
-            <Routes>
               <Route path='/inquiry' element={<ShopInquiry/>}/>
-            </Routes>
+          </Routes>
             <Footer/>
           </div>
       </div>

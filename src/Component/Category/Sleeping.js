@@ -5,7 +5,8 @@ import { CiShoppingBasket } from "react-icons/ci";
 
 const Sleeping = () => {
   const [products, setProducts] = useState([]);
-  const [productCategory, setProductCategory] = useState(['침낭']);
+  const [productId, setProductId] = useState([]);
+  const [productCategory, setProductCategory] = useState(['sleeping']);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -37,7 +38,7 @@ const Sleeping = () => {
                   width: "272.5px",
                   marginright: "30px",
                 }}>
-                  <a href={`/detail/item/${product.productId}`}>
+                  <a href={`/detail/${productId}`}>
                     <div className='imgWrap'>
                       <img src={product.productThumbnail} className="imgs" alt={product.productName} />
                     </div>

@@ -7,7 +7,7 @@ import { CiShoppingBasket } from "react-icons/ci";
 
 const BBQ = () => {
   const [products, setProducts] = useState([]);
-  const [productCategory, setProductCategory] = useState(["화로"]);
+  const [productCategory, setProductCategory] = useState(["bbq"]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -40,7 +40,7 @@ const BBQ = () => {
                   marginright: "30px",
                 }}>
                   
-                  <Link to={`/detail/item/${product.productId}`}>
+                  <Link to={`/detail/${product.productId}`}>
                     <div className='imgWrap'>
                       <img src={product.productThumbnail} className="imgs" alt={product.productName} />
                     </div>
