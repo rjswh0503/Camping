@@ -21,9 +21,7 @@ const Header = () => {
             </Link>
           </h1>
         </section>
-        <section className='Search'>
-          <Search />
-        </section>
+        
         <section className='icon'>
           <Link to='/logout'>
             <IoExit size={40} />

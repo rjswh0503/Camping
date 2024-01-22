@@ -6,6 +6,7 @@ import CategoryList from '../../Component/CategoryList';
 import Footer from '../../Component/Footer';
 import Header from '../../Component/Header';
 import Main from '../shop/Main';
+import Search from '../../Component/Search';
 
 const ShopMain = () => {
   
@@ -15,6 +16,11 @@ const ShopMain = () => {
     <div>
       <div>
       <Carousel/>
+      </div>
+      <div>
+      <section className='Search'>
+        <Search/> 
+      </section>
       </div>
       <div>
         <Main/>
