@@ -15,10 +15,11 @@ import { Navigate } from 'react-router-dom';
 
 
 const AddMain = () => {
+    
 
 
     return (
-        <Router>
+        
             <div>
                 <main className='add-Main'>
                     <div className='my-page' aria-labelledby="my page navigation">
@@ -51,9 +52,7 @@ const AddMain = () => {
                         </div>
                     </div>
                 </main>
-                <Footer/>
             </div>
-        </Router>
     );
 };
 
